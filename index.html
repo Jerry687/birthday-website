@@ -7,44 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <header class="hero">
-            <h1>Happy Birthday, My Love!</h1>
-            <p>Today, we celebrate the most amazing person in my life.</p>
-            <a href="#about" class="btn">Learn More</a>
-        </header>
-
-        <!-- About Section -->
-        <section id="about" class="about">
-            <h2>About You</h2>
-            <p>You are kind, beautiful, and the reason for my happiest moments.</p>
-            <div class="photo-wall">
-                <img src="images/photo1.jpg" alt="Memory 1">
-                <img src="images/photo2.jpg" alt="Memory 2">
-            </div>
-        </section>
-
-        <!-- Memories Section -->
-        <section id="memories" class="memories">
-            <h2>Our Memories</h2>
-            <p>Here are some unforgettable moments we've shared together.</p>
-            <div class="timeline">
-                <div class="event">
-                    <h3>First Date</h3>
-                    <p>Our journey began on this magical day.</p>
-                </div>
-                <div class="event">
-                    <h3>Vacation</h3>
-                    <p>Exploring new places and creating memories.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <p>Made with ❤️ by [Your Name]</p>
-        </footer>
+    <div class="envelope-container">
+        <!-- 信封 -->
+        <div class="envelope">
+            <div class="envelope-top"></div>
+            <div class="envelope-bottom"></div>
+        </div>
+        <!-- 打开按钮 -->
+        <button class="open-btn" onclick="openHomepage()">Open</button>
     </div>
+
+    <script>
+        function openHomepage() {
+            // 跳转到主页
+            window.location.href = "homepage.html";
+        }
+
+        // 页面加载时自动触发信封打开动画
+        window.onload = function() {
+            document.querySelector('.envelope-top').classList.add('open');
+        };
+    </script>
 </body>
 </html>
