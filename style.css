@@ -1,72 +1,84 @@
-/* 全局样式 */
+/* General Styles */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #ffcccc, #ff9999);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background: #f8e6e0;
+    color: #333;
 }
 
-.envelope-container {
+.container {
     text-align: center;
 }
 
-/* 信封容器 */
-.envelope {
-    position: relative;
-    width: 200px;
-    height: 120px;
-    background: #fff;
-    border: 2px solid #ff4d4d;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin: 20px auto;
+/* Hero Section */
+.hero {
+    background: url('images/bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
 }
 
-/* 信封顶部（三角形部分） */
-.envelope-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #ff4d4d;
-    clip-path: polygon(0 100%, 50% 0, 100% 100%);
-    transform-origin: top center;
-    transition: transform 1.5s ease-in-out;
+.hero h1 {
+    font-size: 3rem;
 }
 
-/* 信封打开动画 */
-.envelope-top.open {
-    transform: rotateX(-180deg);
+.hero p {
+    font-size: 1.2rem;
 }
 
-/* 信封底部（矩形部分） */
-.envelope-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: #fff;
-}
-
-/* 打开按钮样式 */
-.open-btn {
-    margin-top: 20px;
+.btn {
+    display: inline-block;
     padding: 10px 20px;
     background: #ff4d4d;
     color: white;
-    border: none;
+    text-decoration: none;
     border-radius: 25px;
     font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
-.open-btn:hover {
+.btn:hover {
     background: #ff8080;
+}
+
+/* About Section */
+.about {
+    padding: 50px;
+    background: #fff;
+}
+
+.photo-wall {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.photo-wall img {
+    max-width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Memories Section */
+.memories {
+    padding: 50px;
+    background: #ffe6e6;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-around;
+}
+
+.event {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background: #ff4d4d;
+    color: white;
+    padding: 20px 0;
 }
